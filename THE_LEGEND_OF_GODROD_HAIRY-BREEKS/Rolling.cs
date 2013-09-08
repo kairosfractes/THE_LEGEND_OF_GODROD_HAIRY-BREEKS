@@ -10,6 +10,7 @@ namespace THE_LEGEND_OF_GODROD_HAIRYBREEKS
 		public int health;
 		public int magicka;
 		public int encumbrance;
+		//
 		public int stat_agility;
 		public int stat_endurance;
 		public int stat_intelligence;

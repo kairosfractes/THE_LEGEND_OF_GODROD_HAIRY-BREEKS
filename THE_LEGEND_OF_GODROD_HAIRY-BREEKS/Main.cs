@@ -49,6 +49,7 @@ namespace THE_LEGEND_OF_GODROD_HAIRYBREEKS
 				Console.WriteLine ("Name: {0}", player.myname);
 				Console.WriteLine ("Health: {0}", player.health);
 				Console.WriteLine ("Magicka: {0}", player.magicka);
+				Console.WriteLine ("Encumbrance: {0}", player.encumbrance);
 				Console.WriteLine ("============");
 				Console.WriteLine ("Agility: {0}", player.stat_agility);
 				Console.WriteLine ("Endurance: {0}", player.stat_endurance);
