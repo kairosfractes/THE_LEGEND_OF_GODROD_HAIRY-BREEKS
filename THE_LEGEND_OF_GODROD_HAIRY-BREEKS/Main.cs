@@ -7,7 +7,7 @@ namespace THE_LEGEND_OF_GODROD_HAIRYBREEKS
 	{
 		public static void Main ()
 		{
-			string classname;
+			//string classname;
 			string playername;
 			bool classchosen = false;
 			bool characterchosen = false;
@@ -15,6 +15,7 @@ namespace THE_LEGEND_OF_GODROD_HAIRYBREEKS
 			while (!characterchosen) {
 				Console.WriteLine ("WHAT IS YOUR NAME, HERO?");
 				playername = Console.ReadLine ();
+				Console.Clear ();
 				while (!classchosen) {
 					Console.WriteLine ("Being an individual of determination and skill, you can pick up pretty much anything and be good at it." +
 						"\nHowever, time and lifestyle changes have forced you to pick a specific skillset.");
@@ -24,24 +25,24 @@ namespace THE_LEGEND_OF_GODROD_HAIRYBREEKS
 					case ConsoleKey.W:
 						player = new Warrior (playername);
 						classchosen = true;
-						classname = "warrior";
+						//classname = "warrior";
 						break;
 					case ConsoleKey.M:
 						player = new Mage (playername);
 						classchosen = true;
-						classname = "mage";
+						//classname = "mage";
 						break;
 					case ConsoleKey.T:
 						player = new Thief (playername);
 						classchosen = true;
-						classname = "thief";
+						//classname = "thief";
 						break;
 					default:
 						Console.WriteLine ("DAS NOT A CALSS SIR");
 						break;
 					}
 				}
-				rolled:
+				Console.Clear ();
 				Console.WriteLine ("============");
 				Console.WriteLine ("PLAYER STATS");
 				Console.WriteLine ("============");
@@ -70,19 +71,9 @@ namespace THE_LEGEND_OF_GODROD_HAIRYBREEKS
 				case ConsoleKey.N:
 					Console.WriteLine ("WHO ARE YOU, REALLY?");
 					break;
-				case ConsoleKey.R:
-					if (classname == "warrior") {
-						player = new Warrior (playername);
-						goto rolled;
-					}
-					if (classname == "mage") {
-						player = new Mage (playername);
-						goto rolled;
-					}
-					if (classname == "thief") {
-						player = new Thief (playername);
-						goto rolled;
-					}
+				default:
+					characterchosen = true;
+					break;
 				}
 			}
 			Console.Clear ();
@@ -107,7 +98,7 @@ namespace THE_LEGEND_OF_GODROD_HAIRYBREEKS
 				Console.WriteLine ("case 3");
 				goto default;
 			default:
-				Console.WriteLine ("Godrod Hairy-Breeks: 'YOU DARE TO BE SNIPPY WITH ME?! YOU WILL BE TAUGHT BY MY FAT WIENER WHAT RESPECT IS! PREPARE FOR THE ANAL RAVAGING OF YOUR LIFETIME, PEASANT!'\n" +
+				Console.WriteLine ("Godrod Hairy-Breeks: 'YOU DARE TO BE SNIPPY WITH ME?! \nYOU WILL BE TAUGHT BY MY FAT WIENER WHAT RESPECT IS! \nPREPARE FOR THE ANAL RAVAGING OF YOUR LIFETIME, PEASANT!'\n" +
 					"Lord Godrod tears off his leathers in fury, and begins to storm towards you with his dong dragging across the carpeted floor...");
 				player.Die ();
 				break;
